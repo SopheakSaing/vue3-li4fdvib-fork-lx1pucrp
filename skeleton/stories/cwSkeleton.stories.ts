@@ -12,7 +12,19 @@ export const SkeletonAvatar = () => ({
 export const SkeletonLibrary = () => ({
     components: { SkeletonItem },
     template: `
-          <skeleton-item :avatar="true" height="lg" />
+    <div class="row m-0 activity-body-wrapper flex-fill cec-pt-md-6 cec-pt-4"> 
+        <div class="activity-card-wrapper p-0 border rounded w-30">
+            <div class="activity-thumbnail d-flex justify-content-center align-items-center border-bottom position-relative">
+                <skeleton-item class="cw-icon-2xl w-100" :animation="true" radius="md"/>
+            </div>
+            <div class="cec-p-3">
+                <skeleton-item class="w-180 mb-2" :paragraph="true" height="sm" />
+                <skeleton-item class="w-15 cec-my-1 p-1" :paragraph="true" height="sm" />
+                <skeleton-item class="w-150" :paragraph="true" height="sm" />
+            </div>
+        </div>
+    </div>
+       
       `,
   });
 

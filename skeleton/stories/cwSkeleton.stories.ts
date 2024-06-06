@@ -13,9 +13,9 @@ export const SkeletonLibrary = () => ({
     components: { SkeletonItem },
     template: `
     <div class="row m-0 activity-body-wrapper flex-fill cec-pt-md-6 cec-pt-4"> 
-        <div class="activity-card-wrapper p-0 border rounded w-30">
-            <div class="activity-thumbnail d-flex justify-content-center align-items-center border-bottom position-relative">
-                <skeleton-item class="cw-icon-2xl w-100" :animation="true" radius="md"/>
+        <div class="activity-card-wrapper p-0 border rounded min-width-272 cec-ml-md-6 cec-mb-md-6 cec-mx-md-0 cec-mx-4 cec-mb-4 col-md-3">
+            <div class="activity-thumbnail d-flex justify-content-center align-items-center border-bottom position-relative min-height-120">
+                <skeleton-item class="cw-icon-2xl w-100 min-height-120" :animation="true" radius="md" />
             </div>
             <div class="cec-p-3">
                 <skeleton-item class="w-180 mb-2" :paragraph="true" height="sm" />
@@ -28,7 +28,7 @@ export const SkeletonLibrary = () => ({
       `,
   });
 
-export const SkeletonCommunity = () => ({
+export const SkeletonCommunity = () => ({ 
   components: { SkeletonItem },
   template: `
     <div class="skeleton-community-wrapper ">

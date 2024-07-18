@@ -9,10 +9,102 @@ export const SkeletonAvatar = () => ({
     `,
 });
 
+export const LmsUpdate = () => ({
+    components: { SkeletonItem },
+    template: `
+        <div class="learning-management-wrapper cec-card cec-px-3 cec-mb-4">
+            <div>
+                <skeleton-item class="cec-my-1 p-1 w-70" :animation="true" height="sm" />
+            </div>
+
+            <a class="course-item mt-3">
+                <div class="learning-profile">
+                    <skeleton-item class="user-icon-lg my-2 w-10" :animation="true" height="lg" radius="lg"/>
+                </div>
+                <div class="learning-detail">
+                    <div>
+                        <skeleton-item class="w-50 cec-my-1 mb-1" :paragraph="true" height="sm" />
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <skeleton-item class="w-15 cec-my-1 p-1" :paragraph="true" height="sm" />
+                    </div>
+                    <div class="mt-1">
+                        <skeleton-item class="w-15 cec-my-1 p-1" :paragraph="true" height="sm" />
+                    </div>
+                    <div class="mt-2 d-flex">
+                        <div class="">
+                            <skeleton-item class="cw-icon-sm" :animation="true" height="sm" />
+                        </div>
+                        <div>
+                            <skeleton-item class="cw-icon-sm" :animation="true" height="sm" />
+                        </div>
+                    </div>
+                </div>
+                
+            </a>
+        </div>
+    `
+})
+
+export const SkeletonCommunity = () => ({ 
+    components: { SkeletonItem },
+    template: `
+      <div class="skeleton-community-wrapper ">
+          <h1>List community in search</h1>
+          <div class="cec-card community-search-tile mb-4 cec-px-4" >
+              <div class="cec-card__body">
+                  <div class="d-flex flex-column flex-lg-row flex-xl-row align-items-center">
+                      <div class="align-self-center">
+                          <div class="community-search-tile__profile">
+                              <skeleton-item :avatar="true" />
+                          </div>
+                      </div>
+                      <div class="w-100 ml-lg-4 ml-xl-4 pb-4 pb-lg-0 pb-xl-0 d-flex flex-column">
+                          <div class="d-flex cec-mt-sm-0 cec-mt-2">
+                              <skeleton-item class="skeleton-badge w-120" height="lg" />
+                              <skeleton-item class="skeleton-badge w-120 cec-ml-1" height="lg" />
+                          </div>
+                          <div class="cec-mt-3">
+                              <skeleton-item class="w-120" :paragraph="true" height="md" />
+                              <skeleton-item class="w-180 cec-mt-2" :paragraph="true" height="sm" />
+                          </div>
+                      </div>
+                      <div class="mt-4 mt-lg-0 mt-xl-0">
+                          <skeleton-item class="skeleton-button" />
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <h1>List my community</h1>
+          <div class="mb-4 cec-px-4 cec-card">
+              <div class="d-flex flex-row align-items-center py-2 py-sm-4 border border-top-0 border-left-0 border-right-0 border-style-dash" v-for="index in 9" :key="index">
+                  <div class="align-self-center">
+                      <skeleton-item class="w-100-px mr-4 d-none d-sm-block" :avatar="true" />
+                      <skeleton-item class="w-50-px mr-4 d-block d-sm-none" :avatar="true"/>
+                  </div>
+                  <div class="w-100 d-flex flex-column">
+                      <div class="d-none d-sm-flex cec-mt-sm-0 cec-mt-2">
+                          <skeleton-item class="skeleton-badge w-200" height="sm" />
+                          <skeleton-item class="skeleton-badge w-120 cec-ml-1" height="sm" />
+                      </div>
+                      <div class="d-flex d-sm-none cec-mt-sm-0 cec-mt-2">
+                          <skeleton-item class="skeleton-badge w-200" height="sm" />
+                      </div>
+                      <div class="cec-mt-3">
+                          <skeleton-item class="w-120" :paragraph="true" height="md" />
+                          <skeleton-item class="w-120 cec-mt-2" :paragraph="true" height="sm" />
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    `,
+  });
+
 export const SkeletonLibrary = () => ({
     components: { SkeletonItem },
     template: `
-    <div class="row m-0 activity-body-wrapper flex-fill cec-pt-md-6 cec-pt-4"> 
+    <div class="row m-0 activity-body-wrapper flex-fill cec-pt-md-6 cec-pt-4 "> 
         <div class="activity-card-wrapper p-0 border rounded min-width-272 cec-ml-md-6 cec-mb-md-6 cec-mx-md-0 cec-mx-4 cec-mb-4 col-md-3">
             <div class="activity-thumbnail d-flex justify-content-center align-items-center border-bottom position-relative min-height-120">
                 <skeleton-item class="cw-icon-2xl w-100 min-height-120" :animation="true" radius="md" />
@@ -28,61 +120,8 @@ export const SkeletonLibrary = () => ({
       `,
   });
 
-export const SkeletonCommunity = () => ({ 
-  components: { SkeletonItem },
-  template: `
-    <div class="skeleton-community-wrapper ">
-        <h1>List community in search</h1>
-        <div class="cec-card community-search-tile mb-4 cec-px-4" >
-            <div class="cec-card__body">
-                <div class="d-flex flex-column flex-lg-row flex-xl-row align-items-center">
-                    <div class="align-self-center">
-                        <div class="community-search-tile__profile">
-                            <skeleton-item :avatar="true" />
-                        </div>
-                    </div>
-                    <div class="w-100 ml-lg-4 ml-xl-4 pb-4 pb-lg-0 pb-xl-0 d-flex flex-column">
-                        <div class="d-flex cec-mt-sm-0 cec-mt-2">
-                            <skeleton-item class="skeleton-badge w-120" height="lg" />
-                            <skeleton-item class="skeleton-badge w-120 cec-ml-1" height="lg" />
-                        </div>
-                        <div class="cec-mt-3">
-                            <skeleton-item class="w-120" :paragraph="true" height="md" />
-                            <skeleton-item class="w-180 cec-mt-2" :paragraph="true" height="sm" />
-                        </div>
-                    </div>
-                    <div class="mt-4 mt-lg-0 mt-xl-0">
-                        <skeleton-item class="skeleton-button" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <h1>List my community</h1>
-        <div class="mb-4 cec-px-4 cec-card">
-            <div class="d-flex flex-row align-items-center py-2 py-sm-4 border border-top-0 border-left-0 border-right-0 border-style-dash" v-for="index in 9" :key="index">
-                <div class="align-self-center">
-                    <skeleton-item class="w-100-px mr-4 d-none d-sm-block" :avatar="true" />
-                    <skeleton-item class="w-50-px mr-4 d-block d-sm-none" :avatar="true"/>
-                </div>
-                <div class="w-100 d-flex flex-column">
-                    <div class="d-none d-sm-flex cec-mt-sm-0 cec-mt-2">
-                        <skeleton-item class="skeleton-badge w-200" height="sm" />
-                        <skeleton-item class="skeleton-badge w-120 cec-ml-1" height="sm" />
-                    </div>
-                    <div class="d-flex d-sm-none cec-mt-sm-0 cec-mt-2">
-                        <skeleton-item class="skeleton-badge w-200" height="sm" />
-                    </div>
-                    <div class="cec-mt-3">
-                        <skeleton-item class="w-120" :paragraph="true" height="md" />
-                        <skeleton-item class="w-120 cec-mt-2" :paragraph="true" height="sm" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  `,
-});
 
+  
 export const SkeletonCourse = () => ({
   components: { SkeletonItem },
   template: `

@@ -5,50 +5,103 @@ import SkeletonItem from '~/skeleton/src/SkeletonItem.vue';
 export const SkeletonAvatar = () => ({
   components: { SkeletonItem },
   template: `
-        <skeleton-item :avatar="true" height="lg" />
+    <div class="cec-card my-learning-progress-wrapper cec-px-3 cec-pt-3">
+    <skeleton-item class="w-50 cec-mb-4 cec-mt-1" height="md" radius="lg"></skeleton-item>
+    <skeleton-item class="w-20 cec-mb-4" height="sm" radius="lg"></skeleton-item>
+    <div
+        class="row course-item cec-mt-3 cec-pb-3">
+        <div class="learning-profile">
+            <skeleton-item
+                class="user-icon-lg my-2"
+                radius="lg"
+            ></skeleton-item>
+        </div>
+        <div class="learning-detail">
+            <skeleton-item class="w-80" height="sm" radius="lg"></skeleton-item>
+            <skeleton-item class="w-60 cec-mt-2" height="sm" radius="lg"></skeleton-item>
+            <skeleton-item class="w-40 cec-mt-2" height="sm" radius="lg"></skeleton-item>
+        </div>
+    </div>
+    </div>
     `,
 });
 
-export const LmsUpdate = () => ({
+
+export const SkeletonLibrary = () => ({
     components: { SkeletonItem },
     template: `
-        <div class="learning-management-wrapper cec-card cec-px-3 cec-mb-4">
-            <div>
-                <skeleton-item class="cec-my-1 p-1 w-70" :animation="true" height="sm" />
-            </div>
+      <div class="row m-0 activity-body-wrapper flex-fill cec-pt-md-6 cec-pt-4 "> 
+          <div class="activity-card-wrapper p-0 border rounded min-width-272 cec-ml-md-6 cec-mb-md-6 cec-mx-md-0 cec-mx-4 cec-mb-4 col-md-3">
+              <div class="activity-thumbnail d-flex justify-content-center align-items-center border-bottom position-relative min-height-120">
+                  <skeleton-item class="cw-icon-2xl w-100 min-height-120" :animation="true" radius="md" />
+              </div>
+              <div class="cec-p-3">
+                  <skeleton-item class="w-180 mb-2" :paragraph="true" height="sm" />
+                  <skeleton-item class="w-15 cec-my-1 p-1" :paragraph="true" height="sm" />
+                  <skeleton-item class="w-150" :paragraph="true" height="sm" />
+              </div>
+          </div>
+      </div>
+         
+        `,
+  });
 
-            <a class="course-item mt-3">
-                <div class="learning-profile">
-                    <skeleton-item class="user-icon-lg my-2 w-10" :animation="true" height="lg" radius="lg"/>
-                </div>
-                <div class="learning-detail">
-                    <div>
-                        <skeleton-item class="w-50 cec-my-1 mb-1" :paragraph="true" height="sm" />
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <skeleton-item class="w-15 cec-my-1 p-1" :paragraph="true" height="sm" />
-                    </div>
-                    <div class="mt-1">
-                        <skeleton-item class="w-15 cec-my-1 p-1" :paragraph="true" height="sm" />
-                    </div>
-                    <div class="mt-2 d-flex">
-                        <div class="">
-                            <skeleton-item class="cw-icon-sm" :animation="true" height="sm" />
-                        </div>
-                        <div>
-                            <skeleton-item class="cw-icon-sm" :animation="true" height="sm" />
-                        </div>
-                    </div>
-                </div>
-                
-            </a>
+export const CommunityWidget = () => ({
+    components: { SkeletonItem },
+    template: `
+    <div class="cec-card__left-content cec-card__column-left">
+        <div class="community-widget-wrapper cec-card cec-p-3 cec-mb-4">
+            <skeleton-item class="m-0 cec-my-1 p-1 w-40" :animation="true" height="sm" />
+            <div class="border-last-child-none">
+                <div class="py-3">
+                    <div class="community-profile d-flex align-items-center">
+                            <skeleton-item class="m-0 user-icon-lg my-2 img-circle cec-user-profile" :avatar="true"/>
+                            <div>
+                                <skeleton-item class="m-0 cec-my-1 p-1 w-100" :animation="true" height="sm" />
+                                <skeleton-item class="m-0 cec-my-1 p-1 w-100" :animation="true" height="sm" />
+                            </div>
+            </div>  
         </div>
-    `
-})
+    </div>
+    
+      `,
+  });
 
-export const SkeletonCommunity = () => ({ 
-    components: { SkeletonItem },
-    template: `
+export const LmsUpdate = () => ({
+  components: { SkeletonItem },
+  template: `
+    <div class="learning-management-wrapper cec-card cec-p-3 cec-mb-4">
+        <skeleton-item class="cec-my-1 p-1 w-70" :animation="true" height="sm" />
+        <div class="course-item mt-3">
+            <div class="learning-profile">
+                <skeleton-item
+                    class="my-2 w-10"
+                    :animation="true"
+                    radius="lg"/>
+            </div>
+            <div class="learning-detail">
+                <skeleton-item class="w-50 cec-my-1 mb-1" :paragraph="true" height="lg" />
+                <div class="d-flex align-items-center">
+                    <skeleton-item class="w-15 cec-my-1 p-1" :paragraph="true" height="sm" />
+                </div>
+                <cw-text class="mt-1">
+                    <skeleton-item class="w-15 cec-my-1 p-1" :paragraph="true" height="sm" />        </cw-text>
+                <div class="d-inline-block mt-2">
+                    <skeleton-item class="cw-icon-sm" :animation="true" height="sm" />
+                </div>
+                <div class="d-inline-block">
+                    <skeleton-item class="cw-icon-sm" :animation="true" height="sm" />
+                </div>
+            </div>
+        </div>
+    </div>
+    `,
+});
+
+
+export const SkeletonCommunity = () => ({
+  components: { SkeletonItem },
+  template: `
       <div class="skeleton-community-wrapper ">
           <h1>List community in search</h1>
           <div class="cec-card community-search-tile mb-4 cec-px-4" >
@@ -99,29 +152,9 @@ export const SkeletonCommunity = () => ({
           </div>
       </div>
     `,
-  });
-
-export const SkeletonLibrary = () => ({
-    components: { SkeletonItem },
-    template: `
-    <div class="row m-0 activity-body-wrapper flex-fill cec-pt-md-6 cec-pt-4 "> 
-        <div class="activity-card-wrapper p-0 border rounded min-width-272 cec-ml-md-6 cec-mb-md-6 cec-mx-md-0 cec-mx-4 cec-mb-4 col-md-3">
-            <div class="activity-thumbnail d-flex justify-content-center align-items-center border-bottom position-relative min-height-120">
-                <skeleton-item class="cw-icon-2xl w-100 min-height-120" :animation="true" radius="md" />
-            </div>
-            <div class="cec-p-3">
-                <skeleton-item class="w-180 mb-2" :paragraph="true" height="sm" />
-                <skeleton-item class="w-15 cec-my-1 p-1" :paragraph="true" height="sm" />
-                <skeleton-item class="w-150" :paragraph="true" height="sm" />
-            </div>
-        </div>
-    </div>
-       
-      `,
-  });
+});
 
 
-  
 export const SkeletonCourse = () => ({
   components: { SkeletonItem },
   template: `

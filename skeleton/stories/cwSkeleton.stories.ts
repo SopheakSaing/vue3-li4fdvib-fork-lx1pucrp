@@ -50,23 +50,34 @@ export const CommunityWidget = () => ({
     components: { SkeletonItem },
     template: `
         <div class="community-widget-wrapper cec-card cec-p-3 cec-mb-4">
-            <skeleton-item class="m-0 cec-my-1 p-1 w-40" :animation="true" height="sm" />
-
-            <div class="">
-                <div class="py-3">
-                    <div class="community-profile d-flex align-items-center">
+            <div>
+                <skeleton-item class="m-0 cec-my-1 p-1 w-40" :animation="true" height="sm" />
+            </div>
+            <div class="border-last-child-none">
+                <div class="community-profile d-flex align-items-center">
+                    <div>
                         <skeleton-item class="m-0 user-icon-lg my-2 img-circle cec-user-profile" :avatar="true"/>
-                        <div class="d-flex">
-                        
+                    </div>
+                    <div class="d-flex flex-column ml-3">
+                        <div>
+                            <skeleton-item class="m-0 cec-my-1 p-1 w-40" :animation="true" height="sm" />
                         </div>
-                        <skeleton-item class="m-0 cec-my-1 p-1 w-40" :animation="true" height="sm" />
-                        <div d-inline-block>
-                            <skeleton-item class="m-0 user-icon-lg my-2 img-circle cec-user-profile" :avatar="true"/>
-                            <skeleton-item class="m-0 user-icon-lg my-2 img-circle cec-user-profile" :avatar="true"/>
-                            <skeleton-item class="m-0 user-icon-lg my-2 img-circle cec-user-profile" :avatar="true"/>
-                        </div>    
-            </div>  
+                        <div class="d-flex align-items-center mt-2">
+                            <div>
+                                <skeleton-item class="m-0 user-icon-lg my-2 img-circle cec-user-profile" :avatar="true"/>
+                            </div>    
+                            <div>
+                                <skeleton-item class="m-0 user-icon-lg my-2 img-circle cec-user-profile" :avatar="true"/>
+                            </div>  
+                            <div>
+                                <skeleton-item class="m-0 user-icon-lg my-2 img-circle cec-user-profile" :avatar="true"/>
+                            </div>  
+                        </div>
+                    </div>    
+                </div>
+            </div>
         </div>
+
     
       `,
   });

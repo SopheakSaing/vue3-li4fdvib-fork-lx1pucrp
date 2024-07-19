@@ -49,20 +49,24 @@ export const SkeletonLibrary = () => ({
 export const CommunityWidget = () => ({
     components: { SkeletonItem },
     template: `
-    <div class="cec-card__left-content cec-card__column-left">
         <div class="community-widget-wrapper cec-card cec-p-3 cec-mb-4">
             <skeleton-item class="m-0 cec-my-1 p-1 w-40" :animation="true" height="sm" />
-            <div class="border-last-child-none">
+
+            <div class="">
                 <div class="py-3">
                     <div class="community-profile d-flex align-items-center">
+                        <skeleton-item class="m-0 user-icon-lg my-2 img-circle cec-user-profile" :avatar="true"/>
+                        <div class="d-flex">
+                        
+                        </div>
+                        <skeleton-item class="m-0 cec-my-1 p-1 w-40" :animation="true" height="sm" />
+                        <div d-inline-block>
                             <skeleton-item class="m-0 user-icon-lg my-2 img-circle cec-user-profile" :avatar="true"/>
-                            <div>
-                                <skeleton-item class="m-0 cec-my-1 p-1 w-100" :animation="true" height="sm" />
-                                <skeleton-item class="m-0 cec-my-1 p-1 w-100" :animation="true" height="sm" />
-                            </div>
+                            <skeleton-item class="m-0 user-icon-lg my-2 img-circle cec-user-profile" :avatar="true"/>
+                            <skeleton-item class="m-0 user-icon-lg my-2 img-circle cec-user-profile" :avatar="true"/>
+                        </div>    
             </div>  
         </div>
-    </div>
     
       `,
   });
